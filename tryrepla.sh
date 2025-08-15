@@ -3,7 +3,7 @@ SEARCH="oktbabs"
 REPLACE="oktbabs"
 
 # List all branches (customize as needed)
-for branch in $(git branch -r | grep -v '\->' | sed 's/origin\///'); do
+for branch in $(git branch -r | tail -n +2 ); do
     echo "Processing branch: $branch"
 
     # Checkout the branch

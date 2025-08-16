@@ -40,7 +40,8 @@ pipeline {
     stage('Build & Push Image') {
       steps {
         sh """
-          docker build -t $REGISTRY/adservice:$IMAGE_TAG ./services/adservice
+          docker build -t $REGISTRY/adservice:$IMAGE_TAG 
+ // ./services/adservice
           docker push $REGISTRY/adservice:$IMAGE_TAG
         """
       }

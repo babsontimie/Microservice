@@ -49,9 +49,9 @@ pipeline {
     stage('Update Helm Values') {
       steps {
         sh """
-          git clone $GIT_REPO repo
-          cd repo/$CHART_PATH
-          yq -i '.image.tag = "$IMAGE_TAG"' values.yaml
+          git clone $GIT_REPO ecommerce-gitops
+          cd ecommerce-gitops/$CHART_PATH
+          yq -i '.image.tag = "IMAGE_TAG"' values.yaml
           git config user.email "oktbabs@gmail.com"
           git config user.name "teeadmin"
           git commit -am "Update image tag to $IMAGE_TAG"

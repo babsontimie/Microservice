@@ -27,7 +27,7 @@ RUN ./gradlew installDist
 
 FROM eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c as without-grpc-health-probe-bin
 
-RUN apk add --no-cache ca-certificates
+RUN  apk  add  --no-cache  ca-certificates
 
 # Download Stackdriver Profiler Java agent
 RUN mkdir -p /opt/cprof && \

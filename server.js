@@ -109,7 +109,8 @@ class HipsterShopServer {
     );
   }
 }
+HipsterShopServer.PORT = process.env.PORT || "50051";  // default gRPC port
 
-HipsterShopServer.PORT = process.env.PORT;
+//  HipsterShopServer.PORT = process.env.PORT;
 
 module.exports = HipsterShopServer;
